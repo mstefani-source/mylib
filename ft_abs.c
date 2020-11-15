@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstefani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mstefani <mstefani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/17 11:15:40 by mstefani          #+#    #+#             */
-/*   Updated: 2020/11/15 13:42:17 by mstefani         ###   ########.fr       */
+/*   Created: 2019/11/28 17:03:41 by mstefani          #+#    #+#             */
+/*   Updated: 2019/11/28 17:05:28 by mstefani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memalloc(size_t size)
+int		ft_abs(int d)
 {
-	void *res;
-
-	res = malloc(sizeof(char) * size);
-	if (res == 0)
-		return (0);
-	ft_bzero(res, size);
-	return (res);
+	if (d < 0)
+		return (d * -1);
+	return (d);
 }

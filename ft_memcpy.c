@@ -6,7 +6,7 @@
 /*   By: mstefani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 16:24:50 by mstefani          #+#    #+#             */
-/*   Updated: 2019/09/22 16:23:25 by mstefani         ###   ########.fr       */
+/*   Updated: 2020/11/15 13:44:25 by mstefani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	isrc = (unsigned char*)src;
 	if (idst == ((void *)0) && isrc == ((void *)0))
 		return (0);
-	while (n - i)
+	while (i <= n)
 	{
 		idst[i] = isrc[i];
 		i++;

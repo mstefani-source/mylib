@@ -6,7 +6,7 @@
 /*   By: mstefani <mstefani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 14:33:20 by mstefani          #+#    #+#             */
-/*   Updated: 2019/09/22 16:08:30 by mstefani         ###   ########.fr       */
+/*   Updated: 2020/11/15 13:40:02 by mstefani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 
 	f = (unsigned char*)s;
 	i = 0;
-	while (i - n)
+	while (i != n)
 	{
 		f[i] = '\0';
 		i++;

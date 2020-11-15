@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstefani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mstefani <mstefani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 14:40:49 by mstefani          #+#    #+#             */
-/*   Updated: 2019/09/23 21:16:39 by mstefani         ###   ########.fr       */
+/*   Updated: 2019/11/28 17:02:58 by mstefani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
+# include <math.h>
 
 typedef struct		s_list
 {
@@ -25,6 +26,14 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef struct		s_vec
+{
+	double			x;
+	double			y;
+	double			z;
+}					t_vec;
+
+int					ft_abs(int d);
 int					ft_sqrt(int nb);
 int					ft_factorial(int nb);
 void				ft_bzero(void *s, size_t n);
@@ -54,6 +63,7 @@ int					ft_isascii(int c);
 int					ft_isupper(int c);
 int					ft_islower(int c);
 int					ft_atoi(const char *st);
+int					ft_atoi_base(const char *s, int rate);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				ft_strclr(char *s);
@@ -82,6 +92,7 @@ char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_join_and_free(char **s1, char const *s2);
 char				*ft_strtrim(char const *s);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_itoa(int n);
@@ -93,5 +104,13 @@ void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_vec				ft_vectorscale(t_vec *v, double n);
+t_vec				ft_vectorsub(t_vec *v1, t_vec *v2);
+t_vec				ft_vectorcross(t_vec *v1, t_vec *v2);
+void				ft_vectornorm(t_vec *v);
+double				ft_vectordot(t_vec *v1, t_vec *v2);
+double				ft_vectorlen(t_vec *v);
+t_vec				ft_vectoradd(t_vec *v1, t_vec *v2);
+int					ft_rgb_to_int(int red, int green, int blue);
 
 #endif
