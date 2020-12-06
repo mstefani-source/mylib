@@ -35,6 +35,7 @@ typedef struct		s_vec
 
 int					ft_abs(int d);
 int					ft_sqrt(int nb);
+double				ft_atof(const char *nptr);
 int					ft_factorial(int nb);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memset(void *b, int c, size_t len);
