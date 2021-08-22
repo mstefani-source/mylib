@@ -46,7 +46,7 @@ void	ft_vectornorm(t_vec *v)
 {
 	double	n;
 
-	n = 1.0 / sqrt(v->x * v->x + v->y * v->y + v->z * v->z);
+	n = 1.0 / ft_sqrt(v->x * v->x + v->y * v->y + v->z * v->z);
 	v->x *= n;
 	v->y *= n;
 	v->z *= n;
@@ -62,7 +62,7 @@ double	ft_vectordot(t_vec *v1, t_vec *v2)
 
 double	ft_vectorlen(t_vec *v)
 {
-	return(sqrt(v->x * v->x + v->y * v->y + v->z * v->z));
+	return(ft_sqrt(v->x * v->x + v->y * v->y + v->z * v->z));
 }
 
 t_vec	ft_vectoradd(t_vec *v1, t_vec *v2)
