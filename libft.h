@@ -18,6 +18,10 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <math.h>
+# include <fcntl.h>
+# include <stdio.h>
+# include <sys/uio.h>
+# define BUFF_SIZE 32
 
 typedef struct		s_list
 {
@@ -97,6 +101,7 @@ char				*ft_join_and_free(char **s1, char const *s2);
 char				*ft_strtrim(char const *s);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_itoa(int n);
+void				ft_printf(char* format, ...);
 int					ft_overlong(long int d, int sign, char c);
 int					ft_leni(long long int n);
 t_list				*ft_lstnew(void const *content, size_t content_size);
@@ -113,5 +118,6 @@ double				ft_vectordot(t_vec *v1, t_vec *v2);
 double				ft_vectorlen(t_vec *v);
 t_vec				ft_vectoradd(t_vec *v1, t_vec *v2);
 int					ft_rgb_to_int(int red, int green, int blue);
+int					get_next_line(const int fd, char **line);
 
 #endif
